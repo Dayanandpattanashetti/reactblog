@@ -1,0 +1,38 @@
+.top {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  flex-direction: row;
+}
+
+.topImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 20px;
+  margin-right: 20px;
+  font-family: "Lora", serif;
+}
+
+.navbar-toggler:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.logout{
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .topImg {
+    display: none;
+  }
+}

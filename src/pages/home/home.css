@@ -1,0 +1,14 @@
+.home {
+  display: flex;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+  }
+}
