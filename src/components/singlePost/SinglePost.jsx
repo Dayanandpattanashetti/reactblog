@@ -11,7 +11,7 @@ export default function SinglePost() {
   const location = useLocation();
   const path = location.pathname.split("/")[2].replace(":", "");
   const [post, setPost] = useState({});
-  const PF = "https://mernblog.onrender.com/images/";
+  const PF = "https://mernblog-ykbt.onrender.com/images/";
   const { user } = useContext(Context);
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");

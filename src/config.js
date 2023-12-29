@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export const axiosInstance = axios.create({
-  baseURL: "https://mernblog.onrender.com/",
+  baseURL: "https://mernblog-ykbt.onrender.com/",
 });

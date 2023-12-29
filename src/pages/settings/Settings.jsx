@@ -14,7 +14,7 @@ export default function Settings() {
   const [success, setSuccess] = useState(false);
   const { user, dispatch } = useContext(Context);
 
-  const PF = "https://mernblog.onrender.com/images/";
+  const PF = "https://mernblog-ykbt.onrender.com/images/";
 
   useEffect(() => {
     setUsername(user.username || "");
@@ -99,7 +99,7 @@ export default function Settings() {
                   ? URL.createObjectURL(file)
                   : user.profilePic
                   ? PF + user.profilePic
-                  : "https://mernblog.onrender.com/images/user.png"
+                  : "https://mernblog-ykbt.onrender.com/images/user.png"
               }
               alt=""
             />

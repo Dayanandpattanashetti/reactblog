@@ -9,7 +9,7 @@ function Topbar() {
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
   };
-  const PF = "https://mernblog.onrender.com/images/";
+  const PF = "https://mernblog-ykbt.onrender.com/images/";
   const handleClick = (path) => {
     window.location.replace(path);
   };
