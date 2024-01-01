@@ -1,5 +1,5 @@
 import "./register.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { axiosInstance } from "../../config";
 
@@ -8,6 +8,8 @@ export default function Register() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [error, setError] = useState(false);
+
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     setError(false);
@@ -18,8 +20,8 @@ export default function Register() {
         email,
         password,
       });
-      {
-        res.data && window.location.replace("/login");
+      if (res.data) {
+        navigate("/login");
       }
     } catch (error) {
       setError(true);

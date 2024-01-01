@@ -1,6 +1,6 @@
 import { useRef, useContext } from "react";
 import "./login.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Context } from "../../context/Context";
 import { axiosInstance } from "../../config";
 
@@ -8,6 +8,7 @@ export default function Login() {
   const userRef = useRef();
   const passwordRef = useRef();
   const { dispatch, isFetching } = useContext(Context);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -20,6 +21,7 @@ export default function Login() {
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("refreshToken", res.data.refreshToken);
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data.others });
+      navigate("/");
     } catch (err) {
       dispatch({ type: "LOGIN_FAILURE" });
     }
